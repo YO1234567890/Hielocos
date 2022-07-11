@@ -12,9 +12,11 @@ let vidas = 3;
 let estoyVivo = true;
 
 class Hielocos extends Phaser.Scene {
+
     constructor() {
         super('Hielocos');
     }
+
     preload() {
         this.load.setBaseURL('https://antonio.com.mx');
         this.load.image('fondo_oceano', 'imagenes/fondo_oceano.jpg');
@@ -22,7 +24,7 @@ class Hielocos extends Phaser.Scene {
         this.load.image('hieloco', 'imagenes/hieloco.png');
     }
     create() {
-        this.scale.displaySize.setAspectRation(ALTO / ANCHO);
+        this.scale.displaySize.setAspectRation(ANCHO / ALTO);
         this.scale.refresh();
         this.fondo = this.add.tileSprite(0, 0, 0, 0, 'fondo_oceano')
             .setOrigin(0)
@@ -104,6 +106,7 @@ const configuracion = {
     },
     scale: {
         mode: Phaser.Scale.FIT,
+        /* celular */
     },
     scene: [Hielocos]
 };
