@@ -24,7 +24,7 @@ class Hielocos extends Phaser.Scene {
         this.load.image('hieloco', 'imagenes/hieloco.png');
     }
     create() {
-        this.scale.displaySize.setAspectRation(ANCHO / ALTO);
+        this.scale.displaySize.setAspectRatio(ANCHO / ALTO);
         this.scale.refresh();
         this.fondo = this.add.tileSprite(0, 0, 0, 0, 'fondo_oceano')
             .setOrigin(0)
